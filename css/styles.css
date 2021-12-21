@@ -1,0 +1,732 @@
+/* media query part */
+/* desktop */
+@media screen and (min-width:1080px) {
+    .pagewidth {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 30px 1fr 30px 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        grid-template-areas: "menu mblock mblock mblock"
+            "p1 p1 p1 p1"
+            "p11 p12 p13 p14"
+            "p2 p2 p2 p2"
+            "p21 p22 p23 p24";
+    }
+
+    .mobileBox {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    /* Get this idea from https://www.sitepoint.com/five-ways-to-hide-elements-in-css/ */
+
+    .footblock {
+        width: 23.2%;
+    }
+
+    /* this one is serve to "product page" */
+    .mainbottom {
+        margin-bottom: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 250px;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas:" mainleft01 mainleft02 mainright"
+                            " maindetail maindetail mainright";
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width:800px) and (max-width:1080px) {
+    .pagewidth {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 30px 1fr 30px 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        grid-template-areas: "menu mblock mblock"
+            "p1 p1 p1"
+            "p11 p12 p13"
+            "p2 p2 p2"
+            "p21 p22 p23";
+    }
+
+    .p14 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .p24 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .mobileBox {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .footblock {
+        width: 32.2%;
+    }
+    .footblock3{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    /* this one is serve to "product page" */
+    .mainbottom {
+        margin-bottom: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas:" mainleft01 mainleft02 "
+                            " maindetail maindetail ";
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    
+    .mainright{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:800px) {
+
+    .pagewidth {
+        min-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .main {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 30px 1fr 30px 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        grid-template-areas: "mobileBox mobileBox"
+            "p1 p1"
+            "p11 p12"
+            "p2 p2"
+            "p21 p22";
+    }
+
+    .menu {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .block3 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .p13 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .p14 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .p23 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .p24 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .footblock {
+        width: 48.2%;
+    }
+    .footblock2{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .footblock3{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .mainright{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    /* this one is serve to "product page" */
+    .mainbottom {
+        margin-bottom: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas:" mainleft01 mainleft02 "
+                            " maindetail maindetail ";
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+}
+
+/* ---moboile menu definition------------------*/
+.mobileBox {
+    grid-area: mobileBox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 200px;
+}
+
+.mobileMenu {
+    width: 32%;
+    height: 47%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    align-content: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobileMenu a{
+    color: white;
+    text-decoration: none;   
+    text-transform: uppercase;
+}
+.mobileMenu a:hover{
+    color: #1db8a6;
+}
+.mbox1{
+    background-color: #2d89ef;
+}
+.mbox2{
+    background-color: #00a300;
+}
+.mbox3{
+    background-color: #7e3878;
+}
+.mbox4{
+    background-color: #da532c;
+}
+.mbox5{
+    background-color: #00aba9;
+}
+.mbox6{
+    background-color: #e3a21a;
+}
+
+/* Format definition for header */
+.headerflex {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block a {
+    color: gray;
+    text-decoration: none;
+}
+
+.block ul {
+    display: flex;
+}
+
+.block li {
+    list-style-type: none;
+    padding: 0px 15px;
+    border-right: 1px dotted grey;
+}
+
+.block li a {
+    color: grey;
+    text-decoration: none;
+}
+
+.block li a:hover {
+    color: #00ffea;
+}
+
+.banner {
+    height: 200px;
+    padding: 5px 0px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.navflex {
+    background-color: #383838;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navflex ul {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+.navflex li {
+    list-style-type: none;
+    border-right: 2px ridge grey;
+    padding: 15px 0px;
+}
+
+.navflex li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px;
+    text-transform: uppercase;
+}
+
+.navflex li a:hover {
+    background-color: #1db8a1;
+}
+
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchbar input {
+    height: 20px;
+    margin: 0px 5px 0px 5px;
+    width: 150px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.searchbar img {
+    margin: 4px 5px 0px 0px;
+}
+
+/*definition for main part-index.html*/
+.menu {
+    grid-area: menu;
+}
+
+.block2 {
+    border: 1px solid lightgray;
+    padding: 0px;
+}
+
+.block2 ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.block2 h3 {
+    margin: 0px;
+    height: 20px;
+    color: white;
+    background-color: #1db8a1;
+    padding: 10px;
+}
+
+.block2 ul a {
+    text-decoration: none;
+    color: gray;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.block2 ul a:hover {
+    color: #00ffcc;
+}
+
+.block2 li {
+    margin: 10px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 15px;
+}
+
+.block2 li span {
+    padding: 10px;
+}
+
+.block3 {
+    grid-area: mblock;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bimg{
+    display: block;
+}
+#btext{
+    display: none;
+    width: 60%;
+    height: 100%;   
+}
+
+#sale{
+    color: #1db8b3;
+    border: 0px;
+    background-color: white;
+    vertical-align: bottom;
+}
+#saletext{
+    display: none;
+}
+#profile{
+    color: #1db8b8;
+    border: 0px;
+    background-color: white;
+    vertical-align: bottom;
+}
+.formprofile{
+    color: #1db8ab;
+    padding: 20px 0px;
+}
+.profilelabel{
+    display: inline-block;
+    width: 100px;
+    padding-right: 10px;
+    text-align: right;
+    vertical-align:top;
+}
+.profileinput{
+    color: #1db8a1;
+    margin-left: 190px;
+}
+
+.block3 img {
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+
+.text {
+    width: 37%;
+    color: #B81D22;
+}
+
+.text span {
+    font-size: 68px;
+    text-transform: uppercase
+}
+
+.p1 {
+    grid-area: p1;
+}
+
+.p2 {
+    grid-area: p2;
+}
+
+.product1 {
+    border-bottom: 1px solid lightgray;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product1 h3 {
+    color: gray;
+    text-transform: uppercase
+}
+
+.product1 a {
+    text-decoration: none;
+    color: gray;
+    padding-right: 5px;
+}
+
+.product1 a:hover {
+    color: #1db8a6;
+}
+
+
+.p11 {
+    grid-area: p11;
+}
+
+.p12 {
+    grid-area: p12;
+}
+
+.p13 {
+    grid-area: p13;
+}
+
+.p14 {
+    grid-area: p14;
+}
+
+.p21 {
+    grid-area: p21;
+}
+
+.p22 {
+    grid-area: p22;
+}
+
+.p23 {
+    grid-area: p23;
+}
+
+.p24 {
+    grid-area: p24;
+}
+
+.productblock {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.productblock h4 {
+    text-transform: uppercase;
+    color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+.productblock img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.productprice {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #1db8b3;
+}
+
+.productdetail {
+    height: 25px;
+    width: 22.9%;
+    border: 1px solid #1db8ab;
+    background-color: #1db8ab;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.productdetail a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase
+}
+
+.productdetail a:hover {
+    color: black;
+}
+
+/* definition for footer part */
+.footerflex {
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+}
+
+.footblock {
+    border-left: 1px solid lightgray;
+    margin: 0% 1%;
+}
+
+.footblock P {
+    color: gray;
+    padding: 0px 0px 10px 20px;
+    border-bottom: 1px solid lightgray;
+    width: 90%
+}
+
+.footblock ul {
+    list-style-type: none;
+}
+
+.footblock li {
+    padding-bottom: 5px;
+}
+
+.footblock li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.footblock li a:hover {
+    color: #00ffea;
+}
+
+/* definition for productinformation.*/
+
+.maintop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid lightgray;
+    height: 40px;
+    margin: 5px 0px;
+    color: gray;
+}
+
+.maintop a {
+    padding: 0px 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+
+.mainright {
+    grid-area: mainright;
+    border: 1px solid lightgray;
+    height: 100%;
+}
+
+.mainleft01 {
+    grid-area: mainleft01;
+    border: 1px solid lightgray;
+    margin: 5px;
+}
+
+.mainleft01 img {
+    width: 100%;
+    height: 100%;
+}
+
+.mainleft02 {
+    grid-area: mainleft02;
+    color: gray;
+}
+
+.mainleft02 h3 {
+    color: #1db8ab;
+    padding-left: 20px;
+}
+
+.mainleft02 h4 {
+    padding-left: 20px;
+}
+
+.mainleft02 p {
+    padding-left: 30px;
+}
+
+.mainleft02 span {
+    padding-left: 30px;
+}
+
+#size {
+    margin-left: 20px;
+}
+
+.lableprice {
+    padding-top: 14px;
+    padding-left: 10px;
+}
+
+.linered {
+    border-bottom: 1px solid #1db8ab;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.linegray {
+    border-bottom: 1px solid lightgray;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.price {
+    color: #1db8a6;
+    font-size: 32px
+}
+
+.mainleft02 ul {
+    list-style-type: none
+}
+
+.mainleft02 li {
+    margin-top: 16px;
+    margin-right: 50px
+}
+
+.mainleft02 li a {
+    text-decoration: none;
+    color: gray;
+}
+
+.mainleft02 li a:hover {
+    color: #1db8b3;
+}
+
+.maindetail {
+    grid-area: maindetail;
+    margin-left: 6px;
+    border: 1px solid lightgray;
+}
+
+.mainleft03 {
+    height: 42px;
+    display: flex;
+    align-items: center
+}
+
+.mainleft03 h4 {
+    padding: 10px 25px;
+    color: gray;
+}
+
+.mainleft04 {
+    width: 100%;
+}
+
+.mainleft04 p {
+    margin: 10px;
+    font-size: 16px;
+    line-height: 31px;
+    color: gray;
+}
